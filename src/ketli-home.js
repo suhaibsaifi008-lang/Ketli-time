@@ -1,7 +1,7 @@
 import './ketli.css';
 import './ketli-photo-hero.css';
 import { teas, galleryImage, searchTeas, recommendTeas, teaLink } from './ketli-catalog.js';
-import { $, $$, mountChrome, bindLightbox, icon, productCard, openDialog, reducedMotion, toast } from './ketli-common.js';
+import { $, $$, mountChrome, bindLightbox, icon, productCard, reducedMotion, toast } from './ketli-common.js';
 import { createBrewingTimer } from './ketli-timer.js';
 import { gsap } from 'gsap';
 import { mountNaturalMotion } from './ketli-motion.js';
@@ -45,16 +45,6 @@ $$('[data-pack-detail]').forEach(button=>button.addEventListener('click',()=>{
 }));
 $('#packaging-photo-toggle').addEventListener('click',()=>{packageView=packageView===5?0:5;renderPackaging();const key=packageView===5?'inside':'outside';$('#packaging-explanation').textContent=packageDetails[key].text;$$('[data-pack-detail]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.packDetail===key)));});
 renderPackaging();
-let modelLoading=false,modelViewer=null;
-$('#open-3d').addEventListener('click',async()=>{
-  openDialog($('#model-dialog'));if(modelViewer||modelLoading)return;modelLoading=true;$('#kettle-view').innerHTML='<p class="model-loading" role="status">Unfolding your little kettle…</p>';
-  try{
-    const {mountKettle}=await import('./ketli-model.js');$('#kettle-view').replaceChildren();modelViewer=await mountKettle($('#kettle-view'),teas,$('#swatches'),$('#model-buttons'));
-  }catch{
-    $('#kettle-view').innerHTML='<div class="model-unavailable"><p>The 3D view isn’t available on this device.</p><p>You can still explore the label and opened packaging below.</p></div>';
-    $('#swatches').innerHTML=teas.map(t=>`<a href="${teaLink(t.id)}">${t.name} ${icon('arrowUp')}</a>`).join('');
-  }finally{modelLoading=false;}
-});
 
 let brewTea=teas[0],brewMode='hot';
 const timer=createBrewingTimer({
@@ -80,4 +70,4 @@ $('#cancel-timer').addEventListener('click',()=>{cancelTimer();$('#timer-status'
 renderBrew();
 
 const disposeMotion=mountNaturalMotion();
-if(import.meta.hot)import.meta.hot.dispose(()=>{disposeMotion();timer.cancel();modelViewer?.dispose();heroHeaderObserver.disconnect();});
+if(import.meta.hot)import.meta.hot.dispose(()=>{disposeMotion();timer.cancel();heroHeaderObserver.disconnect();});

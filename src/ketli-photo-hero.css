@@ -13,6 +13,7 @@
 .brand-hero .hero-actions>.button:hover{background:#fff8e8}
 .brand-hero .hero-actions>.underlined{font-size:11px;color:inherit;border-color:#fff8e8a0}
 .brand-hero a:focus-visible{outline:2px solid #fff8e8;outline-offset:5px}
+.hero-mobile-teas{display:none}
 @media(max-width:600px){
   .brand-hero{height:calc(100svh - var(--hero-header-height,114px))}
   .brand-hero .hero-story{padding:27px 6% 0}
@@ -45,4 +46,38 @@
   .brand-hero .hero-story h1{font-size:clamp(24px,3.8vw,26px);margin-bottom:8px}
   .brand-hero .hero-intro{line-height:1.45;margin-bottom:8px}
   .brand-hero .hero-actions>.button{min-height:32px;padding:6px 13px}
+}
+/* Phones use real, individually framed packaging photos instead of cropping the desktop row. */
+@media(max-width:600px){
+  .brand-hero{display:grid;grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}
+  .brand-hero .hero-story{grid-column:1;grid-row:1;height:auto;padding:26px 6% 12px}
+  .brand-hero .hero-story h1{font-size:clamp(30px,8.8vw,40px);margin-bottom:12px}
+  .brand-hero .hero-intro{font-size:11px;line-height:1.65;margin-bottom:16px}
+  .brand-hero .hero-actions>.button{min-height:44px}
+  .brand-hero .hero-landscape>picture>img{height:240%;object-position:50% 0}
+  .hero-mobile-teas{display:grid;grid-column:1;grid-row:2;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:10px 4px;min-height:0;padding:0 5% 24px;position:relative;z-index:1}
+  .hero-mobile-teas>a{display:flex;flex-direction:column;justify-content:center;gap:6px;min-width:0;min-height:0;text-align:center;align-items:center}
+  .hero-mobile-teas img{width:100%;height:auto;aspect-ratio:1;max-height:calc(100% - 28px);min-height:0;object-fit:contain;filter:drop-shadow(0 7px 9px #14200b55)}
+  .hero-mobile-teas span{font:18px/1.2 var(--serif);color:#fff8e8;flex-shrink:0}
+  .hero-mobile-teas>a:focus-visible{outline-offset:0;border-radius:2px}
+}
+@media(max-width:600px) and (max-height:650px){
+  .brand-hero .hero-story{padding-top:16px;padding-bottom:8px}
+  .brand-hero .hero-story h1{font-size:28px;margin-bottom:8px}
+  .brand-hero .hero-intro{font-size:10px;line-height:1.5;margin-bottom:10px}
+  .hero-mobile-teas{padding-bottom:12px;gap:6px 4px}
+  .hero-mobile-teas span{font-size:16px}
+}
+@media(min-width:601px) and (max-width:1000px) and (max-height:600px) and (pointer:coarse){
+  .brand-hero{display:grid;grid-template-columns:42% 58%;grid-template-rows:1fr}
+  .brand-hero .hero-story{height:auto;padding:14px 5%;justify-content:center}
+  .brand-hero .hero-story h1{font-size:28px;margin-bottom:8px}
+  .brand-hero .hero-intro{font-size:10px;line-height:1.5;margin-bottom:10px}
+  .brand-hero .hero-actions{gap:14px}
+  .brand-hero .hero-actions>.button{min-height:40px;padding:9px 12px}
+  .brand-hero .hero-landscape>picture>img{height:240%;object-position:50% 0}
+  .hero-mobile-teas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:6px;min-height:0;padding:12px 4% 12px 0;position:relative}
+  .hero-mobile-teas>a{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;min-height:0;min-width:0}
+  .hero-mobile-teas img{width:100%;height:auto;aspect-ratio:1;max-height:calc(100% - 22px);min-height:0;object-fit:contain;filter:drop-shadow(0 7px 9px #14200b55)}
+  .hero-mobile-teas span{font:16px/1.2 var(--serif);flex-shrink:0}
 }

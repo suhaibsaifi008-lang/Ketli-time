@@ -1,6 +1,6 @@
 # Ketli Time
 
-Six botanical tea blends with photographic kettle packaging, informational galleries, favourites, a tea finder, brewing timer and an optional 3D viewer. Checkout displays a restocking notice. Notification sign-ups are coming soon; no payment, real order or email collection is enabled.
+Six botanical tea blends with photographic kettle packaging, informational galleries, favourites, a tea finder and brewing timer. Phones show all six complete kettles in a dedicated two-row hero; the laptop hero retains its panoramic photograph. Checkout displays a restocking notice. Notification sign-ups are coming soon; no payment, real order or email collection is enabled.
 
 This is an academic marketing prototype. Prices, recipes and packaging are concepts.
 
