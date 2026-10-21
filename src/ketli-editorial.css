@@ -1,0 +1,248 @@
+/* Consumer-facing hierarchy shared by the home, product and restock pages. */
+:root{--reading-size:15px}
+[hidden]{display:none!important}
+.section-heading h2,.finder-intro h2,.packaging-copy h2,.story-copy h2,.faq-section h2{font-size:clamp(40px,4.2vw,66px);line-height:1.05;letter-spacing:-1px}
+.section-heading>p,.finder-intro>p:not(.overline),.packaging-copy>p:not(.overline),.our-story .story-copy p:not(.overline),.faq-section>div>p{font-size:15px;line-height:1.75}
+.overline{font-size:11px;letter-spacing:.08em}
+.collection .tea-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tea-card{display:flex;flex-direction:column;min-width:0}
+.tea-card-visual .gallery-frame{aspect-ratio:1}
+.tea-card-heading{margin-top:18px}
+.tea-card-heading p{font-size:13px}
+.tea-card-notes{font-size:13px;line-height:1.65;min-height:0;margin:10px 0 20px}
+.tea-card-bottom{margin-top:auto;font-size:12px}
+.tea-card .add-tea{margin-top:12px;min-height:46px}
+.collection-note{font-size:12px;line-height:1.7;text-align:center;color:var(--muted)}
+.collection-toolbar{gap:18px;flex-wrap:wrap}
+.tea-filters{flex-wrap:wrap;gap:8px}
+.tea-filters button{min-height:44px;font-size:12px;padding:10px 14px}
+.finder-intro>h2{margin-bottom:20px}
+.finder-intro>p:not(.overline){max-width:380px}
+.finder-panel{padding:30px}
+.choice-grid label>span{font-size:13px;min-height:72px;display:flex;flex-direction:column;justify-content:center}
+.choice-grid small{font-size:11px;line-height:1.5;margin-top:5px}
+.finder-selects label{font-size:13px}
+.finder-selects select{font-size:14px;min-height:48px}
+.finder-result-heading>p:not(.overline){font-size:14px;line-height:1.7}
+.packaging-copy{padding:clamp(36px,5vw,72px)}
+.packaging-copy>h2{margin-bottom:22px}
+.packaging-points button{padding:16px 24px 16px 0;min-height:66px}
+.packaging-points strong{font-size:14px}
+.packaging-points small{font-size:12px;line-height:1.6;margin-top:5px}
+.packaging-explanation{min-height:0;font-size:13px!important;line-height:1.7}
+.packaging-copy>.small{font-size:11px!important}
+.packaging-visual{min-height:0;align-self:stretch}
+.packaging-visual .gallery-frame{height:100%;min-height:0}
+.packaging-visual .gallery-frame img{object-fit:contain}
+.brew-instructions{border-block:1px solid var(--line);margin-bottom:22px}
+.brew-instructions summary{padding:18px 0;cursor:pointer;font-size:14px;min-height:48px}
+.brew-instructions .brew-steps{margin:0 0 20px}
+.brew-steps p,.brew-serving{font-size:14px;line-height:1.75}
+.brew-steps strong{font-size:14px}
+.brew-control-panel>label{font-size:13px}
+.brew-control-panel>select{font-size:15px;min-height:48px}
+.brew-mode button{font-size:13px;min-height:44px}
+.brew-control-panel>.small{font-size:11px;line-height:1.7}
+.brew-stats span{font-size:12px}
+.timer-row .button{font-size:13px;min-height:46px}
+.our-story{grid-template-columns:.65fr 1.35fr}
+.our-story .story-identity{padding:35px}
+.our-story .story-identity img{max-height:260px;width:auto;max-width:100%;object-fit:contain}
+.our-story .story-copy{padding:48px 8%}
+.our-story .story-copy p:not(.overline){max-width:640px}
+.story-copy .underlined{font-size:13px;margin-top:24px;display:inline-flex;min-height:44px;align-items:center}
+.faq-section .questions summary{font-size:15px;line-height:1.5;min-height:54px}
+.faq-section .questions p{font-size:14px;line-height:1.8}
+.footer-main{grid-template-columns:1fr 1fr 1fr;gap:8%;padding-top:44px;padding-bottom:40px}
+.footer-brand>img{height:130px;width:auto;object-fit:contain}
+.footer-brand>p{font-size:13px;line-height:1.7}
+.footer-main>div>h3{font-size:28px;margin-bottom:16px}
+.footer-main>div>a,.footer-main>div>button{font-size:13px;line-height:1.6;min-height:38px;margin-bottom:4px}
+.footer-main>div>a>span{font-size:11px}
+.footer-bottom{font-size:11px;line-height:1.7}
+.product-intro-text,.blend-summary,.primary-benefit{font-size:15px;line-height:1.75}
+.product-summary .overline{font-size:12px}
+.product-summary h2{font-size:30px}
+.product-sticky-tabs>nav{font-size:13px;gap:26px}
+.product-sticky-tabs>nav>a{display:inline-flex;align-items:center;min-height:44px}
+.product-sticky-tabs{padding-block:5px}
+.gallery-panel-title{font-size:13px;line-height:1.5;margin:12px 0 8px;font-weight:500}
+.gallery-thumbnails button>span:last-child{font-size:11px;line-height:1.5}
+.gallery-caption p{font-size:13px}
+.gallery-caption a{font-size:12px;display:inline-flex;min-height:44px;align-items:center}
+.product-story{display:block}
+.product-story>div{max-width:750px;margin:auto}
+.product-story h2{font-size:42px;line-height:1.1}
+.product-story>div>p:not(.overline){font-size:15px;line-height:1.8}
+.product-brew-layout{grid-template-columns:1fr}
+.product-brew-copy{max-width:850px;width:100%}
+.product-brew-copy .brew-stats{max-width:600px}
+.brew-directions p,.unboxing-row p:not(.overline){font-size:15px;line-height:1.8}
+.brew-directions h3{font-size:28px}
+.unboxing-row{grid-template-columns:1fr;margin-top:30px;padding-top:30px}
+.unboxing-row h3{font-size:36px}
+.label-information dl>div{font-size:14px;line-height:1.7}
+.reason-list p{font-size:14px;line-height:1.75}
+.reason-list h3{font-size:16px}
+.ingredient-grid p{font-size:14px;line-height:1.65}
+.concept-detail{font-size:13px}
+.concept-detail summary{min-height:44px;padding-block:12px}
+.checkout-heading p:not(.overline),.checkout-summary p{font-size:15px;line-height:1.75}
+.checkout-summary>h2{font-size:36px;line-height:1.1}
+.quantity-controls button{width:44px;height:44px}
+.cart-dialog .small,.cart-disclosure{font-size:12px;line-height:1.7}
+.cart-item p{font-size:13px}
+@media(max-width:767px){
+  .announcement{font-size:10px;padding:8px 4%;line-height:1.5}
+  .header{padding:12px 5%;min-height:70px}
+  .brand,.brand img{width:100px;height:44px;object-fit:contain}
+  .header-actions{gap:0}
+  .header-actions>button,.header-actions>button[data-open-cart],.header-actions>button[data-open-shelf]{width:44px;min-width:44px;height:44px;padding:8px 5px;gap:2px}
+  .header-actions .icon{width:19px;height:19px}
+  #mobile-nav a{font-size:16px;min-height:48px;padding:12px 0}
+  .section{padding:44px 5%}
+  .section-heading{display:block;margin-bottom:24px}
+  .section-heading h2,.finder-intro h2,.packaging-copy h2,.story-copy h2,.faq-section h2{font-size:40px;line-height:1.05;letter-spacing:-.7px}
+  .section-heading>p{font-size:15px;line-height:1.65;margin-top:16px}
+  .section-heading>p br{display:contents}
+  .section-heading>p br::after{content:' '}
+  .overline{font-size:11px;line-height:1.5;margin-bottom:12px}
+  .collection .tea-grid,.related-section .tea-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 14px}
+  .collection-toolbar{margin-bottom:24px}
+  .tea-filters{gap:6px}
+  .tea-filters button{font-size:11px;padding:8px 10px;min-height:44px}
+  #collection-count{font-size:12px}
+  .tea-card-heading{margin-top:14px;gap:4px}
+  .tea-card-heading h3{font-size:33px;line-height:1}
+  .tea-card-heading p{font-size:12px;line-height:1.5;margin-top:7px}
+  .tea-card-heading .circle-link{display:none}
+  .tea-card-notes{font-size:12px;line-height:1.6;min-height:58px;margin:9px 0 14px}
+  .tea-card-bottom{font-size:11px;padding-top:12px}
+  .tea-card-bottom>span:last-child{display:none}
+  .tea-card .add-tea{font-size:12px;padding:11px 10px;min-height:46px;gap:4px}
+  .card-caffeine{font-size:9px;padding:5px 7px;left:8px;bottom:8px}
+  .tea-card-visual .save-heart{width:44px;height:44px;top:5px;right:5px}
+  .collection-note{font-size:11px;margin-top:24px}
+  .tea-finder{grid-template-columns:1fr;gap:24px}
+  .finder-intro>p:not(.overline){font-size:15px;line-height:1.7}
+  .finder-panel{padding:22px 18px}
+  .finder-panel legend{font-size:25px;margin-bottom:18px}
+  .choice-grid{gap:10px}
+  .choice-grid label>span{font-size:12px;min-height:78px;padding:12px 8px 12px 25px}
+  .choice-grid small{font-size:10px}
+  .finder-selects label{font-size:13px}
+  .finder-selects select{font-size:16px}
+  #finder-form>.button{width:100%;min-height:48px;font-size:14px;justify-content:space-between}
+  .finder-match>span>strong{font-size:30px}
+  .finder-match>span>span,.finder-alternative,#finder-reset{font-size:12px}
+  .packaging-section{display:flex;flex-direction:column;gap:0}
+  .packaging-copy{order:0;padding:36px 5% 24px}
+  .packaging-visual{order:1;margin:0 5% 30px;min-height:0}
+  .packaging-visual .gallery-frame{aspect-ratio:1;height:auto}
+  .packaging-copy>p:not(.overline){font-size:15px;line-height:1.7}
+  .packaging-points{margin-top:20px}
+  .packaging-points button{padding:14px 22px 14px 0}
+  .packaging-points strong{font-size:14px}
+  .packaging-points small{font-size:12px}
+  .packaging-photo-toggle{font-size:12px;min-height:44px;bottom:40px}
+  .visual-disclosure{font-size:9px}
+  .brewing-workbench{display:flex;flex-direction:column}
+  .brew-photo-column{display:none}
+  .brew-control-panel{padding:24px 20px}
+  .brew-control-panel>h3{font-size:32px;margin:22px 0 12px}
+  .brew-control-panel>label{font-size:13px}
+  .brew-control-panel>select{font-size:16px;padding:12px}
+  .brew-stats{gap:10px;padding:20px 0}
+  .brew-stats strong{font-size:27px}
+  .brew-stats span{font-size:11px;line-height:1.5}
+  .brew-mode button{font-size:13px;min-height:44px}
+  .brew-serving{font-size:14px;min-height:0}
+  .brew-steps strong,.brew-steps p{font-size:14px}
+  .timer-row{flex-wrap:wrap;gap:14px}
+  .timer-row .button{font-size:12px;min-height:48px}
+  .brew-control-panel>.small{font-size:11px}
+  .our-story{display:block;padding:32px 5%}
+  .our-story .story-identity{float:left;width:80px;padding:0;margin:0 22px 10px 0}
+  .our-story .story-identity img{max-height:135px;width:80px}
+  .our-story .story-copy{padding:0}
+  .our-story .story-copy h2{font-size:34px;margin-bottom:20px}
+  .our-story .story-copy p:not(.overline){font-size:15px;clear:both;line-height:1.8}
+  .our-story .story-copy>.overline{padding-top:10px}
+  .story-copy .underlined{margin-top:12px}
+  .faq-section{gap:24px}
+  .faq-section .questions summary{font-size:14px;padding:18px 26px 18px 0}
+  .faq-section .questions p{font-size:14px;line-height:1.8}
+  .footer-main{grid-template-columns:1fr 1fr;gap:24px 18px;padding:32px 5% 24px}
+  .footer-brand{grid-column:1/-1;gap:24px;padding-bottom:22px}
+  .footer-brand>img{height:90px;width:60px}
+  .footer-brand>p{font-size:13px}
+  .footer-main>div>h3{font-size:26px;line-height:1.1;margin-bottom:15px}
+  .footer-main>div>a,.footer-main>div>button{font-size:12px;min-height:44px;margin:0}
+  .footer-main>div>a>span{font-size:10px;margin:0 0 8px}
+  .footer-bottom{font-size:10px;padding:18px 5%;gap:8px}
+  .footer-bottom>span{width:100%}
+  .product-intro{padding:22px 5% 30px;gap:12px;display:flex;flex-direction:column}
+  .product-summary{display:contents}
+  .product-summary>.overline{order:-4;font-size:12px;margin:0}
+  .product-title-row{order:-3}
+  .product-title-row h1{font-size:60px;line-height:1}
+  .product-title-row>span{font-size:13px}
+  .product-gallery{order:-2;margin:4px 0 12px}
+  .product-summary h2{font-size:28px;margin:4px 0}
+  .product-intro-text,.blend-summary,.primary-benefit{font-size:15px;line-height:1.75;margin:0}
+  .product-flavour-notes{margin:4px 0}
+  .product-flavour-notes>span{font-size:12px;padding:7px 10px}
+  .product-facts>div{font-size:13px}
+  .product-facts small{font-size:11px;line-height:1.5}
+  .product-purchase>.small{font-size:11px;line-height:1.6}
+  .product-purchase .add-tea{min-height:48px;font-size:14px}
+  .product-save-box{margin-top:4px;gap:12px}
+  .product-save-box>.save-full,.product-share{font-size:12px;min-height:44px}
+  .gallery-thumbnails{display:flex;overflow-x:auto;gap:9px;padding:4px 1px 10px;scroll-snap-type:x proximity}
+  .gallery-thumbnails button{flex:0 0 82px;min-width:82px;padding:3px;scroll-snap-align:start}
+  .gallery-thumbnails button>span:last-child{font-size:10px;line-height:1.5}
+  .gallery-stage .gallery-arrows{padding:5px 10px;min-height:48px}
+  .gallery-arrows button,.gallery-zoom{min-width:44px;min-height:44px}
+  .gallery-arrows>span{font-size:12px}
+  .gallery-stage .gallery-badge{display:none}
+  .gallery-panel-title{font-size:14px;margin:12px 0 8px}
+  .gallery-caption{margin-top:4px}
+  .gallery-caption p{font-size:12px}
+  .product-sticky-tabs{padding:4px 5%;position:static}
+  .product-sticky-tabs>nav{font-size:12px;gap:22px}
+  .ingredient-grid{gap:24px 16px}
+  .ingredient-grid h3{font-size:27px}
+  .ingredient-grid p{font-size:14px;line-height:1.65}
+  .benefits-editorial>h3{font-size:34px}
+  .reason-list h3{font-size:16px}
+  .reason-list p,.brew-directions p,.unboxing-row p:not(.overline),.product-story>div>p:not(.overline){font-size:15px;line-height:1.75}
+  .product-story h2{font-size:36px}
+  .label-information dl>div{grid-template-columns:1fr 1.6fr;font-size:13px;gap:16px}
+  .label-information>.small{font-size:11px;line-height:1.7}
+  .plain-list li{font-size:14px;line-height:1.7}
+  .label-art>.underlined,.unboxing-row .underlined,.product-brew-copy>.button{font-size:13px;min-height:44px;display:inline-flex;align-items:center}
+  .unboxing-row h3{font-size:34px}
+  .related-section h2{font-size:36px}
+  .related-section .section-heading>.underlined{font-size:13px;min-height:44px;display:inline-flex;align-items:center}
+  .mobile-product-save .add-tea{min-height:46px;font-size:13px}
+  .mobile-product-save>span>small{font-size:11px}
+  .checkout-heading h1{font-size:45px}
+  .checkout-heading p:not(.overline),.checkout-summary p{font-size:15px}
+  .checkout-summary{padding:24px 20px}
+  .checkout-summary>h2{font-size:32px}
+  .cart-dialog{padding:45px 20px}
+  .search-field input{font-size:16px}
+  .search-result>span>span,.shelf-item p{font-size:12px}
+  .search-result>.gallery-frame{width:76px;height:76px}
+  .search-result>span>strong{font-size:28px}
+  .shelf-item .underlined,.info-dialog p,.info-dialog .underlined{font-size:13px;line-height:1.75}
+  .shelf-dialog>.small{font-size:11px;line-height:1.7}
+  .dialog-close{min-width:44px;min-height:44px}
+}
+@media(max-width:360px){
+  .header-actions>button,.header-actions>button[data-open-cart],.header-actions>button[data-open-shelf]{width:42px;min-width:42px}
+  .brand,.brand img{width:88px}
+  .section-heading h2,.finder-intro h2{font-size:36px}
+  .tea-card-heading h3{font-size:30px}
+  .tea-card .add-tea{font-size:11px;padding:11px 8px}
+}

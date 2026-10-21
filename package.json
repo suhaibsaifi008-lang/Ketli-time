@@ -7,7 +7,9 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/*.test.js",
+    "test:browser": "playwright test --config ketli.playwright.config.js",
+    "test:motion": "playwright test --config ketli.motion.playwright.config.js"
   },
   "dependencies": {
     "gsap": "^3.13.0",

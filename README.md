@@ -1,12 +1,12 @@
 # Ketli Time
 
-Six botanical tea blends with photographic kettle packaging, informational galleries, favourites, a tea finder and brewing timer. Phones show all six complete kettles in a dedicated two-row hero; the laptop hero retains its panoramic photograph. Checkout displays a restocking notice. Notification sign-ups are coming soon; no payment, real order or email collection is enabled.
+Six botanical tea blends with photographic kettle packaging, informational galleries, favourites, a tea finder and brewing timer. Phones use a dedicated three-kettle portrait photograph, followed by the complete six-tea collection; the laptop hero retains its panoramic photograph. Product galleries support swipe, zoom and readable, horizontally scrolling thumbnails. Brewing details expand on demand. Checkout displays a restocking notice. Notification sign-ups are coming soon; no payment, real order or email collection is enabled.
 
 This is an academic marketing prototype. Prices, recipes and packaging are concepts.
 
 ## Run
 
-Use Node.js 24.14 or later: `npm ci`, then `npm run dev`. Verify with `npm test` and `npm run build`.
+Use Node.js 24.14 or later: `npm ci`, then `npm run dev`. Verify with `npm test` and `npm run build`. Browser checks: `npm run test:browser` and `npm run test:motion` (installed Google Chrome required).
 
 ## Netlify
 

@@ -27,7 +27,7 @@ heroHeaderObserver.observe($('#site-header'));
 $('#finder-form').addEventListener('submit',e=>{
   e.preventDefault();const data=new FormData(e.currentTarget);const list=recommendTeas(Object.fromEntries(data));
   const primary=list[0];
-  $('#finder-result').innerHTML=`<div class="finder-result-heading"><p class="overline">Your next cup could be</p><h3>${primary.name}</h3><p>${primary.intro}</p></div><a class="finder-match" href="${teaLink(primary.id)}">${galleryImage(primary,0,{eager:true})}<span><strong>${primary.name}</strong><span>${primary.type} / ${primary.caffeine}</span><span class="underlined">Explore my match ${icon('arrowUp')}</span></span></a><p class="finder-alternative">Also worth a look: <a href="${teaLink(list[1].id)}">${list[1].name}, ${list[1].type.toLowerCase()} ${icon('arrowUp')}</a></p><button type="button" class="underlined" id="finder-reset">Choose another moment</button>`;
+  $('#finder-result').innerHTML=`<div class="finder-result-heading"><p class="overline">Your next cup could be</p><h3>${primary.name}</h3><p>${primary.notes.join(' · ')}</p></div><a class="finder-match" href="${teaLink(primary.id)}">${galleryImage(primary,0,{eager:true})}<span><strong>${primary.name}</strong><span>${primary.type} / ${primary.caffeine}</span><span class="underlined">Explore my match ${icon('arrowUp')}</span></span></a><p class="finder-alternative">Also worth a look: <a href="${teaLink(list[1].id)}">${list[1].name}, ${list[1].type.toLowerCase()} ${icon('arrowUp')}</a></p><button type="button" class="underlined" id="finder-reset">Choose another moment</button>`;
   $('#finder-reset').addEventListener('click',()=>{$('#finder-result').innerHTML='';$('#finder-form input').focus();});
   if(!reducedMotion())gsap.fromTo($('#finder-result'),{opacity:.3,y:8},{opacity:1,y:0,duration:.35});
 });
@@ -55,8 +55,8 @@ function cancelTimer(){timer.cancel();$('#timer-display').textContent='';$('#sta
 function renderBrew(){
   cancelTimer();$('#timer-status').textContent='';
   $('#brew-photo').innerHTML=galleryImage(brewTea,brewMode==='hot'?0:3);$('#brew-photo-caption').textContent=`${brewTea.name} / ${brewTea.colourOfCup}. Original concept imagery.`;
-  $('#brew-title').textContent=`${brewTea.name}, your way.`;
-  $('#brew-stats').innerHTML=`<div><strong>${brewTea.amount}</strong><span>loose botanical</span></div><div><strong>${brewTea.temp}°C</strong><span>fresh water</span></div><div><strong>${brewTea.minutes} min</strong><span>steep time</span></div>`;
+  $('#brew-title').textContent=brewTea.name;
+  $('#brew-stats').innerHTML=`<div><strong>${brewTea.amount}</strong><span>loose botanical</span></div><div><strong>${brewTea.temp}°C</strong><span>water · 200 ml</span></div><div><strong>${brewTea.minutes} min</strong><span>steep time</span></div>`;
   $('#brew-step-one').textContent=`Add ${brewTea.amount} to a roomy infuser or teapot. Set out your favourite cup.`;
   $('#brew-step-two').textContent=`Pour over 200 ml water at ${brewTea.temp}°C. Cover and steep for about ${brewTea.minutes} minutes, then strain.`;
   $('#brew-step-three').textContent=brewTea.brew;
