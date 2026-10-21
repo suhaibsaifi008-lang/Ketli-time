@@ -1,0 +1,19 @@
+# Ketli Time
+
+Six botanical tea blends with photographic kettle packaging, informational galleries, favourites, a tea finder, brewing timer and an optional 3D viewer. Checkout displays a restocking notice. Notification sign-ups are coming soon; no payment, real order or email collection is enabled.
+
+This is an academic marketing prototype. Prices, recipes and packaging are concepts.
+
+## Run
+
+Use Node.js 24.14 or later: `npm ci`, then `npm run dev`. Verify with `npm test` and `npm run build`.
+
+## Netlify
+
+Import this GitHub repository. Build command: `npm run build`. Publish directory: `dist`. Node.js 24 is configured in `netlify.toml`. No secrets or application server are required.
+
+After GitHub continuous deployment is connected, pushes to the production branch automatically build and update the same site URL. Local edits alone do not change the live site. For manual deployment, build locally and upload `dist`, including `_headers`.
+
+## Source
+
+`src/ketli-catalog.js` contains product content. Homepage, product and restock page scripts are in `src/`. All website media and downloadable information panels are local in `public/`. The original packaging exports, archived charm project, private notes and local databases are not included.

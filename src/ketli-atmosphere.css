@@ -1,0 +1,27 @@
+/* Botanical texture belongs to the open space; solid reading surfaces sit above it. */
+.botanical-surface{position:relative;isolation:isolate;background:#fbf8f0}
+.botanical-surface::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('/images/ketli-time/botanical-pattern.svg') repeat;background-size:720px 720px;opacity:.55}
+.botanical-surface>.section-heading,.botanical-surface>.collection-toolbar,.botanical-surface>.collection-note,.botanical-surface .tea-card{background:#fbf8f0}
+#brewing.botanical-surface>.brewing-workbench,.product-brewing.botanical-surface>.product-brew-layout,.product-story.botanical-surface>div{background:#fbf8f0}
+.botanical-surface .section-heading{box-shadow:0 0 16px 12px #fbf8f0}
+.product-story.botanical-surface>div{box-shadow:0 0 18px 12px #fbf8f0}
+#packaging-photo{padding:14px 0;background:var(--ivory);width:100%}
+#packaging-photo>.gallery-frame{object-fit:contain}
+.tea-card-visual{overflow:hidden;perspective:1000px}
+.tea-card-visual .gallery-frame{transform-origin:50% 50%;backface-visibility:hidden}
+.tea-card-visual:hover .gallery-frame{transform:none}
+.gallery-crossfade{position:absolute;inset:0;pointer-events:none;z-index:1}
+#gallery-image{position:relative;aspect-ratio:1}
+.gallery-stage .gallery-arrows{position:static;padding:10px 14px;background:var(--ivory);border-top:1px solid var(--line)}
+.gallery-crossfade>.gallery-frame{width:100%;height:100%}
+.button,.save-heart{transition:background-color .18s ease,color .18s ease,border-color .18s ease}
+.save-heart .icon,.save-full .icon{transition:color .18s ease,fill .18s ease}
+.save-heart[aria-pressed="true"] .icon,.save-full[aria-pressed="true"] .icon{fill:currentColor}
+@media(max-width:767px){
+  .botanical-surface::before{background-size:950px 950px;opacity:.4}
+  #packaging-photo{padding:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .button,.save-heart,.save-heart .icon,.save-full .icon{transition:none}
+  [data-natural-photo],.hero-landscape>picture>img,#packaging-photo>.gallery-frame{transform:none!important;opacity:1!important}
+}

@@ -1,0 +1,5 @@
+/* The complete carton, including its coloured handle, stays visible in every view. */
+.gallery-thumbnails button .gallery-frame,
+.brew-photo-column>.gallery-frame,
+.ingredient-photo>.gallery-frame{aspect-ratio:1}
+.gallery-frame>img{object-fit:contain}
