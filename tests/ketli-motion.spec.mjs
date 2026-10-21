@@ -34,7 +34,9 @@ test('short and enlarged mobile screens expand instead of hiding content',async(
   await page.addStyleTag({content:'.hero-story{font-size:200%}.brand-hero .hero-intro{font-size:24px}'});
   const clear=await page.locator('.brand-hero').evaluate(el=>{
     const a=el.querySelector('.hero-actions').getBoundingClientRect(),i=el.querySelector('.hero-portrait img').getBoundingClientRect();
-    return i.top>=a.bottom&&i.bottom<=el.getBoundingClientRect().bottom&&document.documentElement.scrollWidth<=innerWidth;
+    const image=el.querySelector('.hero-portrait img'),scale=Math.max(i.width/image.naturalWidth,i.height/image.naturalHeight);
+    const handles=i.top+i.height-image.naturalHeight*scale+image.naturalHeight*.534*scale;
+    return handles>=a.bottom+16&&i.bottom<=el.getBoundingClientRect().bottom&&document.documentElement.scrollWidth<=innerWidth;
   });
   expect(clear).toBe(true);
 });

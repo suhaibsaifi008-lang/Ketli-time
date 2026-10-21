@@ -21,8 +21,13 @@ renderCollection();
 // Keep the photograph and copy together within the space below the real header.
 const heroHeaderObserver=new ResizeObserver(()=>{
   document.documentElement.style.setProperty('--hero-header-height',`${$('#site-header').getBoundingClientRect().height}px`);
+  const copyHeight=$('.hero-story').getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--hero-copy-height',`${copyHeight}px`);
+  // Enlarged reading text gets extra room while the complete photograph stays visible.
+  document.documentElement.style.setProperty('--hero-phone-fit',copyHeight>350&&innerWidth<500?'contain':'cover');
 });
 heroHeaderObserver.observe($('#site-header'));
+heroHeaderObserver.observe($('.hero-story'));
 
 $('#finder-form').addEventListener('submit',e=>{
   e.preventDefault();const data=new FormData(e.currentTarget);const list=recommendTeas(Object.fromEntries(data));

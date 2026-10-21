@@ -114,7 +114,12 @@ test('responsive hero keeps photography and actions clear without clipping',asyn
       const portrait=getComputedStyle(el.querySelector('.hero-portrait')).display!=='none';
       const image=el.querySelector(portrait?'.hero-portrait img':'.hero-landscape img'),photo=image.getBoundingClientRect();
       const state={portrait,bottom:hero.bottom,loaded:image.naturalWidth>0,overflow:document.documentElement.scrollWidth>innerWidth,actionClear:action.bottom<=photo.top,contained:photo.left>=0&&photo.right<=innerWidth&&photo.bottom<=hero.bottom};
-      if(!portrait){
+      if(portrait){
+        const scale=Math.max(photo.width/image.naturalWidth,photo.height/image.naturalHeight);
+        const handles=photo.top+(photo.height-image.naturalHeight*scale)+image.naturalHeight*.534*scale;
+        state.actionClear=action.bottom+16<=handles;
+        state.contained=Math.abs(photo.width-hero.width)<1&&Math.abs(photo.height-hero.height)<1;
+      }else{
         const scale=Math.max(photo.width/image.naturalWidth,photo.height/image.naturalHeight);
         const handleRatio=image.naturalWidth/image.naturalHeight>2?384/821:467/1024;
         const handles=photo.top+image.naturalHeight*handleRatio*scale+(photo.height-image.naturalHeight*scale);
@@ -127,7 +132,7 @@ test('responsive hero keeps photography and actions clear without clipping',asyn
     expect(geometry.actionClear,JSON.stringify({width,height,geometry})).toBe(true);
     expect(geometry.contained).toBe(true);
     // Short windows expand naturally; normal phones keep the opening within one screen.
-    if(height>=740||!geometry.portrait)expect(geometry.bottom).toBeLessThanOrEqual(height+1);
+    if((height>=740&&width<=430)||!geometry.portrait)expect(geometry.bottom).toBeLessThanOrEqual(height+1);
   }
   await page.setViewportSize({width:390,height:844});
   await expect(page.locator('.hero-phone-heading')).toBeVisible();

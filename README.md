@@ -1,6 +1,6 @@
 # Ketli Time
 
-Six botanical tea blends with photographic kettle packaging, informational galleries, favourites, a tea finder and brewing timer. Phones use a dedicated three-kettle portrait photograph, followed by the complete six-tea collection; the laptop hero retains its panoramic photograph. Product galleries support swipe, zoom and readable, horizontally scrolling thumbnails. Brewing details expand on demand. Checkout displays a restocking notice. Notification sign-ups are coming soon; no payment, real order or email collection is enabled.
+Six botanical tea blends with photographic kettle packaging, informational galleries, favourites, a tea finder and brewing timer. Phones use an edge-to-edge, full-height three-kettle portrait photograph with the introduction on its olive wall, followed by the complete six-tea collection; the laptop hero retains its panoramic photograph. Product galleries support swipe, zoom and readable, horizontally scrolling thumbnails. Brewing details expand on demand. Checkout displays a restocking notice. Notification sign-ups are coming soon; no payment, real order or email collection is enabled.
 
 This is an academic marketing prototype. Prices, recipes and packaging are concepts.
 
